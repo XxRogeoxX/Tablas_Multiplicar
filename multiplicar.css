@@ -1,84 +1,123 @@
-/* Paleta Tropical: Turquesa, Coral y Arena */
+/* Paleta Tropical Actualizada */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 body {
-    background-color: #e0f7fa; /* Azul agua muy claro */
-    background-image: linear-gradient(180deg, #e0f7fa 0%, #fff9c4 100%); /* Degradado arena */
+    background-color: #e0f7fa;
+    background-image: linear-gradient(180deg, #e0f7fa 0%, #fff9c4 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    color: #004d40;
 }
 
-/* Encabezado y Perfil */
+/* Encabezado */
 .main-header {
     width: 100%;
     max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.profile-container {
-    text-align: center;
-    margin-bottom: 15px;
+.welcome-box h1 {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    font-size: 1rem;
+    opacity: 0.8;
 }
 
 .logo {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Foto circular */
-    border: 5px solid #ff8a65; /* Borde color coral */
+    border-radius: 50%;
+    border: 5px solid #ff8a65;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.author-name {
-    color: #00796b;
-    margin-top: 10px;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Input y Feedback */
+.input-section {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* Botón con estilo veraniego */
+.input-section label {
+    font-weight: bold;
+    color: #00796b;
+}
+
+.tropical-input {
+    padding: 15px;
+    border: 2px solid #4db6ac;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.tropical-input:focus {
+    border-color: #ff8a65;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,138,101,0.3);
+}
+
+#help-msg {
+    font-size: 0.85rem;
+    color: #607d8b;
+    font-style: italic;
+}
+
+/* Botón */
 .btn-probar {
-    background-color: #ff8a65; /* Coral */
+    background-color: #ff8a65;
     color: white;
     border: none;
-    padding: 12px 40px;
-    font-size: 1.1rem;
+    padding: 15px 50px;
+    font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 4px 0 #e64a19;
-    transition: transform 0.2s;
+    box-shadow: 0 5px 0 #e64a19;
+    width: 100%;
+}
+
+.btn-probar:hover {
+    background-color: #ff7043;
 }
 
 .btn-probar:active {
-    transform: translateY(4px);
-    box-shadow: none;
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #e64a19;
 }
 
-/* Título y Tabla */
-.tropical-title {
-    color: #004d40;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
+/* Tabla y Resultados */
 .table-wrapper {
+    width: 100%;
+    max-width: 400px;
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.empty-state {
+    padding: 40px;
+    text-align: center;
+    color: #b2dfdb;
+    font-style: italic;
 }
 
 table {
@@ -86,77 +125,19 @@ table {
     border-collapse: collapse;
 }
 
-th {
-    background-color: #4db6ac; /* Turquesa */
-    color: white;
-    padding: 15px;
-    font-size: 1.1rem;
+th { background-color: #4db6ac; color: white; padding: 15px; }
+td { padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; font-size: 1.1rem; }
+
+/* Footer */
+.main-footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
-td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #b2dfdb;
-    color: #00695c;
-    font-weight: bold;
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-tr:nth-child(even) {
-    background-color: #f1fbfb;
-}
-
-/* Responsivo */
+/* Responsive */
 @media (max-width: 480px) {
-    .logo {
-        width: 90px;
-        height: 90px;
-    }
-    
-    .author-name {
-        font-size: 1.1rem;
-    }
-}
-/* Estilos para la sección del Input */
-.input-section {
-    margin: 25px 0;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.input-section label {
-    color: #00796b;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: left;
-}
-
-.tropical-input {
-    padding: 12px 20px;
-    border: 2px solid #4db6ac; /* Color turquesa de la tabla */
-    border-radius: 25px; /* Bordes redondeados como el botón */
-    outline: none;
-    font-size: 1rem;
-    color: #004d40;
-    background-color: rgba(255, 255, 255, 0.8); /* Blanco semi-transparente */
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-/* Efecto al hacer clic en la caja */
-.tropical-input:focus {
-    border-color: #ff8a65; /* Cambia a coral al escribir */
-    background-color: #ffffff;
-    box-shadow: 0 0 8px rgba(255, 138, 101, 0.4);
-}
-
-.tropical-input::placeholder {
-    color: #a0cbc6;
-    font-style: italic;
+    .welcome-box h1 { font-size: 1.5rem; }
+    .logo { width: 100px; height: 100px; }
 }

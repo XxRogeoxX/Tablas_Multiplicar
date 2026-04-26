@@ -3,54 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla del 3 - Ronald Sánchez</title>
+    <title>Tablas de Multiplicar - Ronald Sánchez</title>
     <link rel="stylesheet" href="multiplicar.css">
     <script src="multiplicar.js"></script>
-
 </head>
 <body>
 
     <header class="main-header">
         <div class="profile-container">
             <img src="FOTO_CON_ALESSIA.jpeg" alt="Logo Ronald y Alessia" class="logo">
-            <h2 class="author-name">Ronald Sánchez</h2>
-            
+            <h2 class="author-name">Ronald Sánchez V.</h2>
         </div>
+        
+        <div class="welcome-box">
+            <h1>¡Aprendamos a Multiplicar! 🎨</h1>
+            <p>Escribe un número abajo para generar su tabla automáticamente.</p>
+        </div>
+
         <section class="input-section">
-        <label for="user-input">Ingresar multiplicacion:</label>
-        <input type="number" id="txtValor" placeholder="Escribe algo aquí..." class="tropical-input">
+            <label for="txtValor">¿Qué tabla vamos a estudiar hoy?</label>
+            <input type="number" id="txtValor" placeholder="Ejemplo: 5" class="tropical-input">
+            <small id="help-msg">Presiona el botón o "Enter" para ver el resultado.</small>
         </section>
-        <button onclick="generarTablas()" class="btn-probar">PROBAR</button>
+        
+        <button onclick="generarTablas()" class="btn-probar">¡GENERAR TABLA!</button>
     </header>
 
     <main class="content">
-        <h1 class="tropical-title">Tablas de Multiplicar</h1>
         <div id="tablas" class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Operación</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>3 x 1</td><td>3</td></tr>
-                    <tr><td>3 x 2</td><td>6</td></tr>
-                    <tr><td>3 x 3</td><td>9</td></tr>
-                    <tr><td>3 x 4</td><td>12</td></tr>
-                    <tr><td>3 x 5</td><td>15</td></tr>
-                    <tr><td>3 x 6</td><td>18</td></tr>
-                    <tr><td>3 x 7</td><td>21</td></tr>
-                    <tr><td>3 x 8</td><td>24</td></tr>
-                    <tr><td>3 x 9</td><td>27</td></tr>
-                    <tr><td>3 x 10</td><td>30</td></tr>
-                </tbody>
-            </table>
+            <p class="empty-state">Ingresa un número para comenzar</p>
         </div>
     </main>
 
+    <footer class="main-footer">
+        <p>&copy; 2026 - Creado por Ronald Sánchez V. para Rafaela</p>
+    </footer>
+
 </body>
-<footer>
-    <p>&copy; Creado por: este pechito. Todos los derechos reservados.</p>
-</footer>
 </html>
